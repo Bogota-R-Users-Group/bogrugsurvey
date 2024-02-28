@@ -4,7 +4,7 @@ box::use(
   uuid[UUIDgenerate],
   tibble[tibble],
   purrr[imap_dfr],
-  readr[write_csv]
+  readr[write_csv, read_csv, cols, col_character],
 )
 
 #* @serializer html
@@ -52,3 +52,17 @@ function(req) {
 
 #* @assets ./src/static /static
 list()
+
+#* @serializer csv
+#* @get /api/respuestas
+function() {
+  readr::read_csv(
+    "respuestas.csv",
+    col_names = c("id", "pregunta", "respuesta"),
+    col_types = cols(
+      "id" = col_character(),
+      "pregunta" = col_character(),
+      "respuesta" = col_character()
+    )
+  )
+}
