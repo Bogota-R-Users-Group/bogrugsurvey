@@ -13,6 +13,17 @@
     ]
   },
   "Packages": {
+    "DBI": {
+      "Package": "DBI",
+      "Version": "1.2.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "methods"
+      ],
+      "Hash": "164809cd72e1d5160b4cb3aa57f510fe"
+    },
     "R6": {
       "Package": "R6",
       "Version": "2.5.1",
@@ -22,6 +33,25 @@
         "R"
       ],
       "Hash": "470851b6d5d0ac559e9d01bb352b4021"
+    },
+    "RSQLite": {
+      "Package": "RSQLite",
+      "Version": "2.3.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "DBI",
+        "R",
+        "bit64",
+        "blob",
+        "cpp11",
+        "memoise",
+        "methods",
+        "pkgconfig",
+        "plogr",
+        "rlang"
+      ],
+      "Hash": "f5a75d57e0a3014a6ef537ac04a80fc6"
     },
     "Rcpp": {
       "Package": "Rcpp",
@@ -68,6 +98,18 @@
       ],
       "Hash": "9fe98599ca456d6552421db0d6772d8f"
     },
+    "blob": {
+      "Package": "blob",
+      "Version": "1.2.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "methods",
+        "rlang",
+        "vctrs"
+      ],
+      "Hash": "40415719b5a479b87949f3aa0aee737c"
+    },
     "box": {
       "Package": "box",
       "Version": "1.1.3",
@@ -79,6 +121,17 @@
       ],
       "Hash": "ce8187a260e8e3abc2294284badc3b76"
     },
+    "cachem": {
+      "Package": "cachem",
+      "Version": "1.0.8",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "fastmap",
+        "rlang"
+      ],
+      "Hash": "c35768291560ce302c0a6589f92e837d"
+    },
     "cli": {
       "Package": "cli",
       "Version": "3.6.2",
@@ -89,16 +142,6 @@
         "utils"
       ],
       "Hash": "1216ac65ac55ec0058a6f75d7ca0fd52"
-    },
-    "clipr": {
-      "Package": "clipr",
-      "Version": "0.8.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "utils"
-      ],
-      "Hash": "3f038e5ac7f41d4ac41ce658c85e3042"
     },
     "cpp11": {
       "Package": "cpp11",
@@ -218,20 +261,6 @@
       ],
       "Hash": "e0b3a53876554bd45879e596cdb10a52"
     },
-    "hms": {
-      "Package": "hms",
-      "Version": "1.1.3",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "lifecycle",
-        "methods",
-        "pkgconfig",
-        "rlang",
-        "vctrs"
-      ],
-      "Hash": "b59377caa7ed00fa41808342002138f9"
-    },
     "htmltools": {
       "Package": "htmltools",
       "Version": "0.5.7",
@@ -308,6 +337,17 @@
       ],
       "Hash": "7ce2733a9826b3aeb1775d56fd305472"
     },
+    "memoise": {
+      "Package": "memoise",
+      "Version": "2.0.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Requirements": [
+        "cachem",
+        "rlang"
+      ],
+      "Hash": "e2817ccf4a065c5d9d7f2cfbe7c1d78c"
+    },
     "mime": {
       "Package": "mime",
       "Version": "0.12",
@@ -345,6 +385,13 @@
       ],
       "Hash": "01f28d4278f15c76cddbea05899c5d6f"
     },
+    "plogr": {
+      "Package": "plogr",
+      "Version": "0.2.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "09eb987710984fc2905c7129c7d85e65"
+    },
     "plumber": {
       "Package": "plumber",
       "Version": "1.2.1",
@@ -369,29 +416,20 @@
       ],
       "Hash": "8b65a7a00ef8edc5ddc6fabf0aff1194"
     },
-    "prettyunits": {
-      "Package": "prettyunits",
-      "Version": "1.2.0",
+    "pool": {
+      "Package": "pool",
+      "Version": "1.0.3",
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": [
-        "R"
-      ],
-      "Hash": "6b01fc98b1e86c4f705ce9dcfd2f57c7"
-    },
-    "progress": {
-      "Package": "progress",
-      "Version": "1.2.3",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
+        "DBI",
         "R",
         "R6",
-        "crayon",
-        "hms",
-        "prettyunits"
+        "later",
+        "methods",
+        "rlang"
       ],
-      "Hash": "f4625e061cb2865f111b47ff163a5ca6"
+      "Hash": "b336b9f1b3cc72033258c70dc17edbf1"
     },
     "promises": {
       "Package": "promises",
@@ -423,29 +461,6 @@
         "vctrs"
       ],
       "Hash": "1cba04a4e9414bdefc9dcaa99649a8dc"
-    },
-    "readr": {
-      "Package": "readr",
-      "Version": "2.1.4",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "R6",
-        "cli",
-        "clipr",
-        "cpp11",
-        "crayon",
-        "hms",
-        "lifecycle",
-        "methods",
-        "rlang",
-        "tibble",
-        "tzdb",
-        "utils",
-        "vroom"
-      ],
-      "Hash": "b5047343b3825f37ad9d3b5d89aa1078"
     },
     "renv": {
       "Package": "renv",
@@ -530,17 +545,6 @@
       ],
       "Hash": "79540e5fcd9e0435af547d885f184fd5"
     },
-    "tzdb": {
-      "Package": "tzdb",
-      "Version": "0.4.0",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "cpp11"
-      ],
-      "Hash": "f561504ec2897f4d46f0c7657e488ae1"
-    },
     "utf8": {
       "Package": "utf8",
       "Version": "1.2.3",
@@ -574,32 +578,6 @@
         "rlang"
       ],
       "Hash": "c03fa420630029418f7e6da3667aac4a"
-    },
-    "vroom": {
-      "Package": "vroom",
-      "Version": "1.6.4",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Requirements": [
-        "R",
-        "bit64",
-        "cli",
-        "cpp11",
-        "crayon",
-        "glue",
-        "hms",
-        "lifecycle",
-        "methods",
-        "progress",
-        "rlang",
-        "stats",
-        "tibble",
-        "tidyselect",
-        "tzdb",
-        "vctrs",
-        "withr"
-      ],
-      "Hash": "9db52c1656cf19c124f93124ea57f0fd"
     },
     "webutils": {
       "Package": "webutils",
